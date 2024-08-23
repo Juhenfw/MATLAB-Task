@@ -4,7 +4,6 @@
 **NIM:** 163221047
 
 ## Table of Contents
-![Problem 1](Simple_Task/Study_Case/Pict_src/image.png)
 - [Problem 1: Sawtooth Signal](#problem-1-sawtooth-signal)
 - [Problem 2: Sinusoidal and Exponential Damped Signals](#problem-2-sinusoidal-and-exponential-damped-signals)
   - [Part (a)](#solution-a)
@@ -18,6 +17,9 @@
   - [Condition 4](#condition-4)
 
 ## Problem 1: Sawtooth Signal
+<p align="center">
+  <img src="Pict_src/image.png" alt="Problem 1">
+</p>
 
 ```matlab
 % T = 1/f = (1/(1/5Hz) = 5 second; % periode
