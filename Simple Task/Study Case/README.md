@@ -235,5 +235,79 @@ b = 0.015;% N.m.s/rad
 Kt = 0.06;% N.m/A
 Kv = 0.06; % V/(rad/s)
 R = 2.6; % Ohm
-L = 0.000
+L = 0.00018; % Henry
+
+P = tf(Kt,[J*L (J*R+b*L) (b*R+Kt*Kv)])
+
+t = 0:0.001:100;
+s1 = (t>=0);
+v = 5*s1;
+plot(t,v,"LineWidth",1.5)
+grid on
+xlabel('(sec)')
+ylabel('(Volt)')
+ylim([-0.5 5.5])
+xlim([0 15])
+title('sinyal input')
+
+kec_putar = lsim(P,v,t);
+plot(t,kec_putar,'LineWidth',1.5)
+grid on
+ylim([-0.1 8])
+xlim([0 1])
+xlabel('(sec)')
+ylabel('(rad/sec)')
+title('grafik Problem 5: kecepatan motor dalam (w(t))')
+
+% Konversi ke rpm
+kec_putar = 9.5493*kec_putar;
+plot(t,kec_putar,'LineWidth',1.5)
+grid on
+ylim([-0.5 70])
+xlim([0 1])
+xlabel('(sec)')
+ylabel('(rpm)')
+title('grafik Problem 5: kecepatan motor dalam (w(t))')
+```
+### Condition 4
+```matlab
+% Parameter Motor DC yang digunakan
+J = 0.0014;% kg.m*2
+b = 0.015;% N.m.s/rad
+Kt = 0.1;% N.m/A
+Kv = 0.1; % V/(rad/s)
+R = 2.6; % Ohm
+L = 0.00018; % Henry
+
+P = tf(Kt,[J*L (J*R+b*L) (b*R+Kt*Kv)])
+
+t = 0:0.001:100;
+s1 = (t>=0);
+v = 5*s1;
+plot(t,v,"LineWidth",1.5)
+grid on
+xlabel('(sec)')
+ylabel('(Volt)')
+ylim([-0.5 5.5])
+xlim([0 15])
+title('sinyal input')
+
+kec_putar = lsim(P,v,t);
+plot(t,kec_putar,'LineWidth',1.5)
+grid on
+ylim([-0.1 11])
+xlim([0 1])
+xlabel('(sec)')
+ylabel('(rad/sec)')
+title('grafik Problem 5: kecepatan motor dalam (w(t))')
+
+% Konversi ke rpm
+kec_putar = 9.5493*kec_putar;
+plot(t,kec_putar,'LineWidth',1.5)
+grid on
+ylim([-0.5 100])
+xlim([0 1])
+xlabel('(sec)')
+ylabel('(rpm)')
+title('grafik Problem 5: kecepatan motor dalam (w(t))')
 ```
