@@ -143,7 +143,7 @@ grid on
 title('Problem 4: Solusi ODE')
 ```
 ## Problem 5: DC Motor Model
-**Condition 1**
+### Condition 1
 ```matlab
 % Parameter Motor DC yang digunakan
 J = 0.0014;% kg.m*2
@@ -185,7 +185,7 @@ xlabel('(sec)')
 ylabel('(rpm)')
 title('Grafik Problem 5: kecepatan motor dalam (w(t))')
 ```
-**Condition 2**
+### Condition 2
 ```matlab
 % Parameter Motor DC yang digunakan
 J = 0.0014;% kg.m*2
@@ -227,7 +227,7 @@ xlabel('(sec)')
 ylabel('(rpm)')
 title('grafik Problem 5: kecepatan motor dalam (w(t))')
 ```
-**Condition 3**
+### Condition 3
 ```matlab
 % Parameter Motor DC yang digunakan
 J = 0.0014;% kg.m*2
