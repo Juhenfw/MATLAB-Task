@@ -39,7 +39,7 @@ title('Grafik Problem 1')
 ```
 
 ## Problem 2: Sinusoidal and Exponential Damped Signals
-**Solution (a)**
+### Solution (a)
 ```matlab
 fs = 1000;
 t = -10:1/fs:10;
@@ -52,7 +52,7 @@ xlabel('t')
 title('Grafik Problem 2(a)')
 ```
 
-**Solution (b)**
+### Solution (b)
 ```matlab
 fs = 1000;
 t = -5:1/fs:5;
